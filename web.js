@@ -6,6 +6,11 @@ app.get('/', function(req, res){
   res.sendfile('index.html');
 });
 
+io.configure(function () { 
+  io.set("transports", ["xhr-polling"]); 
+  io.set("polling duration", 10); 
+});
+
 io.on('connection', function(socket){
   console.log('a user connected');
   socket.on('disconnect', function(){
@@ -16,6 +21,7 @@ io.on('connection', function(socket){
     io.emit('chat message', msg);
   });
 });
+
 
 var port = Number(process.env.PORT || 3000);
 http.listen(port, function(){
