@@ -6,10 +6,6 @@ app.get('/', function(req, res){
   res.sendfile('index.html');
 });
 
-io.configure(function () { 
-  io.set("transports", ["xhr-polling"]); 
-  io.set("polling duration", 10); 
-});
 
 io.on('connection', function(socket){
   console.log('a user connected');
