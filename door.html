@@ -17,25 +17,29 @@
 
       #status{
         font-family: 'Lato', sans-serif;
-        font-size: 30px;
+        font-size: 75px;
         display: inline-block;
         vertical-align: middle;
 
         border: 1px solid gray;
-        width: 200px;
-        height: 200px;
+        //width: 200px;
+        //height: 200px;
+        //line-height: 200px;
+        width: 100%;
+        height: 100%;
         line-height: 200px;
-        border-radius: 100px;
       }
 
       #status.open{
         border-color: blue;
-        color: blue;
+        background-color: blue; 
+        color: white;
       }
 
       #status.close{
+        background-color: red; 
         border-color: red;
-        color: red;
+        color: white;
       }
 
       body{
@@ -56,7 +60,6 @@
       .container{
         box-sizing: border-box;
 
-        padding-top: 75px;
 
         width: 100%;
         height: 100%;
